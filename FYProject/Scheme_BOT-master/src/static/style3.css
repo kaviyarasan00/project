@@ -1,0 +1,23 @@
+.layout{
+    margin-left:25rem;
+    margin-top: 2rem;
+    margin-right:25rem;
+}
+.header{
+    margin-left: 35rem;
+    margin-top: 1rem;
+    
+}
+.x1{
+    margin-left:12rem;
+}
+.background {
+    background-image: url(./bg.jpg);
+    background-repeat: no-repeat; /* Display the background image only once */
+    background-size:cover; /* Ensure the background image covers the entire container */
+    opacity: 0.9; /* Set the opacity level (0.5 for 50% opacity) */
+}
+label{
+    color:black;
+}
+

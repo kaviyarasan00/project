@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/style2.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <div class="cover coveron"></div>
+    <div class="root">
+        <div class="bot_icon">   </div>
+        <div class="msg_box on">
+            <div class="title_bar">
+                Scheme Bot
+            </div>
+
+            <div class="msg">
+                
+            </div>
+            <div class="suggestionlist">
+            
+            </div>
+            <form class="input_box" onclick="event.preventDefault();">
+                <input class="inputstr"type="text" placeholder="Text to be send..." autofocus>
+                <button class="sendbtn" type="submit" onclick="savemsg()">Send <i class="fa fa-send-o"></i></button>
+            </form>
+        </div>
+    </div>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">SchemeBot</label>
+        <ul>
+          <li><a class="active" href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="/Resposive Profile cards/status.html">Check status</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Feedback</a></li>
+        </ul>
+      </nav>
+    <!-- Creating By CodingLab -->
+      <div class="container">
+        {% for i in ls %}
+          <div class="box">
+            <div class="image">
+              <img src="../static/logo.png">
+            </div>
+            <div class="name_job">{{i[0]}}</div>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <p> {{i[1]}}</p>
+            <div class="btns">
+              <button onclick="toggleReadMore()">Read More</button>
+             <button><a href="">Apply</a></button>
+            </div>
+          </div>
+        {% endfor %}
+        </div>
+        <div class="container">
+        <div class="box">
+          <div class="image">
+            <img src="../static/annapurna.png" alt="">
+          </div>
+          <div class="name_job">Anna poorna scheme</div>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <p> Under this government loans for women’s to start business, women can sell packed food items and snacks which is one of the most common businesses that women entrepreneurs.
+          <div class="btns">
+            <button>2020-29</button>
+            <button><a href="https://tncsc.tn.gov.in/en/ANNAPOORNA.html" target="_blank">Apply</a></button>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="../static/bc.jpeg" alt="">
+          </div>
+          <div class="name_job">Schemes for the Welfare of Backward  Classes</div>
+            <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <p> The benefit of schemes implemented for the welfare of BCs, MBCs, DNCs in Tamil Nadu are available only to those who are natives of Tamil Nadu</p>
+          <div class="btns">
+            <button>2010-2040</button>
+           <button><a href="https://bcmbcmw.tn.gov.in/welfschemes.htm">Apply</a></button>
+          </div> 
+         </div>
+      </div>
+      
+      <div class="container">
+        <div class="box">
+        <div class="image">
+            <img src="../static/pmmy.png">
+          </div>
+          <div class="name_job">Pradhan Mantri MUDRA Yojana (PMMY)
+          </div>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <p> Pradhan Mantri MUDRA Yojana (PMMY) is a scheme launched by the Hon’ble Prime Minister on April 8, 2015 for providing loans up to 10 lakh to the non-corporate, non-farm small/micro enterprises.</p>
+          <div class="btns">
+            <button>All time</button>
+           <button><a href="https://www.mudra.org.in/UPIPayment">Apply</a></button>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="../static/1000scheme.png" alt="">
+          </div>
+          <div class="name_job">Kalaignar magalir udhavi thogai</div>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <p> Kalaignar Magalir Urimai Thogai Scheme, is a scheme announced by the Government of Tamil Nadu, under which financial assistance of Rs 1000 will be given monthly to economically weaker women.</p>
+          <div class="btns">
+            <button>Read More </button>
+           <button><a href="https://kmut.tn.gov.in/">Apply</a></button>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="../static/100days.jpeg" alt="">
+          </div>
+          <div class="name_job">Mahatma Gandhi Rural Employment Scheme.</div>
+            <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <p> The Mahatma Gandhi National Rural Employment Guarantee Scheme was launched on 02.02.2006. It guarantees 100 days of employment in a financial year to any rural household whose adult members volunteer to do unskilled manual work.</p>
+          <div class="btns">
+            <button>All time</button>
+           <button><a href="https://www.tnrd.tn.gov.in/schemes/nrega.html">Apply</a></button>
+          </div>
+        </div>
+      </div>
+   
+    <script src="../static/index.js"> </script>
+    <script>
+      function toggleReadMore() {
+        var content = document.querySelector('.content');
+        var showMoreBtn = document.querySelector('.show-more');
+    
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+          showMoreBtn.textContent = 'Read more';
+        } else {
+          content.style.maxHeight = content.scrollHeight + 'px';
+          showMoreBtn.textContent = 'Read less';
+        }
+      }
+    </script>
+</body>
+</html>

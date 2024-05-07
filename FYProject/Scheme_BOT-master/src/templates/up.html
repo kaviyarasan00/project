@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Registration</title> 
+    <link rel="stylesheet" href="../static/in_up.css">
+   </head>
+<body>
+  <div class="wrapper">
+    <h2>Registration</h2>
+    <span id = "errormsg"> {{msg}} </span>
+    <form action="/in_up/signup" method="post">
+      <div class="input-box">
+        <input name="username" type="text" placeholder="Enter your name" required>
+      </div>
+      <div class="input-box">
+        <input name= "useremail" type="text" placeholder="Enter your email" required>
+      </div>
+      <div class="input-box">
+        <input name="password1" id = "password1" type="password" placeholder="Create password" required>
+      </div>
+      <div class="input-box">
+        <input name="password2" id = "password2" type="password" placeholder="Confirm password" required>
+      </div>
+      <div class="input-box button">
+        <input name="submitbtn" type="Submit" onclick = "validation(event)" value="Register Now">
+      </div>
+      <div class="text">
+        <h3>Already have an account? <a href="/signin">Login now</a></h3>
+      </div>
+    </form>
+
+  </div>
+  <script>
+    
+    function validation(event){
+      var pass1 = document.getElementById("password1")
+      var pass2 = document.getElementById("password2")
+      var msg = document.getElementById("errormsg")
+      if(pass1.value != pass2.value){
+        document.getElementById("errormsg").innerText = "Password does not match"
+        event.preventDefault();
+        setTimeout(()=>{
+          msg.innerText = ""
+          pass1.value = ""
+          pass2.value = ""
+        },3000)
+      }
+    }
+  </script>
+</body>
+</html>
